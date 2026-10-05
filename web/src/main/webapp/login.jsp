@@ -136,7 +136,7 @@
             </div>
         <% } %>
 
-        <form action="/shopsphere/login" method="post">
+        <form action="${pageContext.request.contextPath}/login" method="post">
 
             <label>Email</label>
             <input type="email"
@@ -158,7 +158,7 @@
 
         <div class="bottom">
             Don't have an account?
-            <a href="/shopsphere/register">Create Account</a>
+            <a href="${pageContext.request.contextPath}/register">Create Account</a>
         </div>
 
     </div>
