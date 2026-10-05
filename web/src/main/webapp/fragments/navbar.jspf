@@ -1,42 +1,42 @@
 <nav style="background:#222; padding:14px 18px;">
     <div style="display:flex; align-items:center; gap:28px; flex-wrap:wrap;">
 
-        <a href="${pageContext.request.contextPath}/"
-           style="color:white; text-decoration:none; font-size:18px;">
+        <a href="/" 
+           style="color:white; text-decoration:none; font-size:18px; font-weight:bold;">
             ShopSphere
         </a>
 
-        <a href="${pageContext.request.contextPath}/products"
+        <a href="/products"
            style="color:white; text-decoration:none;">
             Products
         </a>
 
-        <a href="${pageContext.request.contextPath}/cart"
+        <a href="/cart"
            style="color:white; text-decoration:none;">
             Cart
         </a>
 
-        <a href="${pageContext.request.contextPath}/wishlist"
+        <a href="/wishlist"
            style="color:white; text-decoration:none;">
             Wishlist
         </a>
 
-        <a href="${pageContext.request.contextPath}/orders"
+        <a href="/orders"
            style="color:white; text-decoration:none;">
             Orders
         </a>
 
-        <a href="${pageContext.request.contextPath}/profile"
+        <a href="/profile"
            style="color:white; text-decoration:none;">
             Profile
         </a>
 
-        <a href="${pageContext.request.contextPath}/login"
+        <a href="/login"
            style="color:white; text-decoration:none;">
             Login
         </a>
 
-        <a href="${pageContext.request.contextPath}/register"
+        <a href="/register"
            style="color:white; text-decoration:none;">
             Register
         </a>
