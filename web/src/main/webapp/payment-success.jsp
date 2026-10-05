@@ -112,12 +112,12 @@
         <div class="actions">
 
             <a class="primary"
-               href="/shopsphere/orders">
+               href="${pageContext.request.contextPath}/orders">
                 View My Orders
             </a>
 
             <a class="secondary"
-               href="/shopsphere/products">
+               href="${pageContext.request.contextPath}/products">
                 Continue Shopping
             </a>
 

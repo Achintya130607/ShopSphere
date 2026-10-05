@@ -113,12 +113,12 @@
         <div class="actions">
 
             <a class="retry"
-               href="/shopsphere/checkout">
+               href="${pageContext.request.contextPath}/checkout">
                 Try Again
             </a>
 
             <a class="orders"
-               href="/shopsphere/orders">
+               href="${pageContext.request.contextPath}/orders">
                 View My Orders
             </a>
 

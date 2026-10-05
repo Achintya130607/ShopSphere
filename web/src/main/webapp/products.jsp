@@ -363,11 +363,11 @@
                         <div class="product-actions">
 
                             <a class="view-button"
-                               href="/shopsphere/products?id=${product.productId}">
+                               href="${pageContext.request.contextPath}/products?id=${product.productId}">
                                 View Details
                             </a>
 
-                            <form action="/shopsphere/cart"
+                            <form action="${pageContext.request.contextPath}/cart"
                                   method="post"
                                   style="flex:1; margin:0;">
 

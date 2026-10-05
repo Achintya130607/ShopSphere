@@ -177,7 +177,7 @@
         </div>
 
         <a class="back"
-           href="/shopsphere/products">
+           href="${pageContext.request.contextPath}/products">
             ← Back to Products
         </a>
 

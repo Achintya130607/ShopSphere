@@ -404,7 +404,7 @@
             </p>
 
             <a class="continue-btn"
-               href="/shopsphere/products">
+               href="${pageContext.request.contextPath}/products">
                 🛍️ Continue Shopping
             </a>
 
@@ -506,7 +506,7 @@
 
                                 <!-- Update Quantity -->
                                 <form class="quantity-form"
-                                      action="/shopsphere/cart"
+                                      action="${pageContext.request.contextPath}/cart"
                                       method="post">
 
                                     <input type="hidden"
@@ -537,7 +537,7 @@
                                 </form>
 
                                 <!-- Remove Item -->
-                                <form action="/shopsphere/cart"
+                                <form action="${pageContext.request.contextPath}/cart"
                                       method="post">
 
                                     <input type="hidden"
@@ -585,7 +585,7 @@
                 </div>
 
                 <a class="checkout"
-                   href="/shopsphere/checkout">
+                   href="${pageContext.request.contextPath}/checkout">
                     Proceed to Checkout →
                 </a>
 

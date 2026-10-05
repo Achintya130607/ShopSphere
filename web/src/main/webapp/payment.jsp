@@ -115,7 +115,7 @@
             ₹${param.amount}
         </div>
 
-        <form action="/shopsphere/payment"
+        <form action="${pageContext.request.contextPath}/payment"
               method="post">
 
             <input type="hidden"

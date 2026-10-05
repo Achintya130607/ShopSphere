@@ -278,7 +278,7 @@
             </p>
 
             <a class="shop-btn"
-               href="/shopsphere/products">
+               href="${pageContext.request.contextPath}/products">
                 🛍️ Explore Products
             </a>
 

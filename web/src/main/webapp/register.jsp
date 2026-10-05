@@ -151,7 +151,7 @@
             </div>
         <% } %>
 
-        <form action="/shopsphere/register" method="post">
+        <form action="${pageContext.request.contextPath}/register" method="post">
 
             <label>Name</label>
             <input type="text"
@@ -185,7 +185,7 @@
 
         <div class="bottom">
             Already have an account?
-            <a href="/shopsphere/login">Login</a>
+            <a href="${pageContext.request.contextPath}/login">Login</a>
         </div>
 
     </div>

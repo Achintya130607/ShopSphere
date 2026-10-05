@@ -235,7 +235,7 @@
 
             <h2>Coupon</h2>
 
-            <form action="/shopsphere/checkout" method="get">
+            <form action="${pageContext.request.contextPath}/checkout" method="get">
 
                 <label>Coupon Code</label>
 
@@ -252,7 +252,7 @@
 
             <h2 style="margin-top:30px;">Delivery & Payment</h2>
 
-            <form action="/shopsphere/checkout"
+            <form action="${pageContext.request.contextPath}/checkout"
                   method="post">
 
                 <label>Address</label>

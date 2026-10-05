@@ -357,43 +357,43 @@
 
         <div class="section-title">Main Menu</div>
 
-        <a class="nav-link" href="/shopsphere/admin/dashboard.jsp">
+        <a class="nav-link" href="${pageContext.request.contextPath}/admin/dashboard.jsp">
             <span class="nav-icon">🏠</span>
             Dashboard
         </a>
 
-        <a class="nav-link" href="/shopsphere/admin/products">
+        <a class="nav-link" href="${pageContext.request.contextPath}/admin/products">
             <span class="nav-icon">📦</span>
             Products
         </a>
 
-        <a class="nav-link" href="/shopsphere/admin/categories">
+        <a class="nav-link" href="${pageContext.request.contextPath}/admin/categories">
             <span class="nav-icon">🗂️</span>
             Categories
         </a>
 
-        <a class="nav-link" href="/shopsphere/admin/orders">
+        <a class="nav-link" href="${pageContext.request.contextPath}/admin/orders">
             <span class="nav-icon">🛒</span>
             Orders
         </a>
 
-        <a class="nav-link" href="/shopsphere/admin/users">
+        <a class="nav-link" href="${pageContext.request.contextPath}/admin/users">
             <span class="nav-icon">👥</span>
             Customers
         </a>
 
-        <a class="nav-link" href="/shopsphere/admin/coupons">
+        <a class="nav-link" href="${pageContext.request.contextPath}/admin/coupons">
             <span class="nav-icon">🎟️</span>
             Coupons
         </a>
 
-        <a class="nav-link" href="/shopsphere/admin/reports">
+        <a class="nav-link" href="${pageContext.request.contextPath}/admin/reports">
             <span class="nav-icon">📊</span>
             Reports
         </a>
 
         <div class="logout">
-            <a class="nav-link" href="/shopsphere/logout">
+            <a class="nav-link" href="${pageContext.request.contextPath}/logout">
                 <span class="nav-icon">🚪</span>
                 Logout
             </a>
@@ -484,7 +484,7 @@
                     </div>
 
                     <a class="card-button"
-                       href="/shopsphere/admin/products">
+                       href="${pageContext.request.contextPath}/admin/products">
                         Manage Products →
                     </a>
                 </div>
@@ -504,7 +504,7 @@
                     </div>
 
                     <a class="card-button"
-                       href="/shopsphere/admin/categories">
+                       href="${pageContext.request.contextPath}/admin/categories">
                         Manage Categories →
                     </a>
                 </div>
@@ -524,7 +524,7 @@
                     </div>
 
                     <a class="card-button"
-                       href="/shopsphere/admin/orders">
+                       href="${pageContext.request.contextPath}/admin/orders">
                         Manage Orders →
                     </a>
                 </div>
@@ -544,7 +544,7 @@
                     </div>
 
                     <a class="card-button"
-                       href="/shopsphere/admin/users">
+                       href="${pageContext.request.contextPath}/admin/users">
                         View Customers →
                     </a>
                 </div>
@@ -564,7 +564,7 @@
                     </div>
 
                     <a class="card-button"
-                       href="/shopsphere/admin/coupons">
+                       href="${pageContext.request.contextPath}/admin/coupons">
                         Manage Coupons →
                     </a>
                 </div>
@@ -584,7 +584,7 @@
                     </div>
 
                     <a class="card-button"
-                       href="/shopsphere/admin/reports">
+                       href="${pageContext.request.contextPath}/admin/reports">
                         View Reports →
                     </a>
                 </div>

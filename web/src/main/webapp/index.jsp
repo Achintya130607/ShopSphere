@@ -365,12 +365,12 @@
         <div class="hero-buttons">
 
             <a class="hero-button primary"
-               href="/shopsphere/products">
+               href="${pageContext.request.contextPath}/products">
                 🛒 Browse Products →
             </a>
 
             <a class="hero-button secondary"
-               href="/shopsphere/register">
+               href="${pageContext.request.contextPath}/register">
                 👤 Create Account →
             </a>
 
@@ -406,7 +406,7 @@
 
 <section class="features">
 
-    <a href="/shopsphere/products" class="feature-link">
+    <a href="${pageContext.request.contextPath}/products" class="feature-link">
         <div class="feature products">
 
             <div class="feature-icon">
@@ -422,7 +422,7 @@
         </div>
     </a>
 
-    <a href="/shopsphere/cart" class="feature-link">
+    <a href="${pageContext.request.contextPath}/cart" class="feature-link">
         <div class="feature cart">
 
             <div class="feature-icon">
@@ -438,7 +438,7 @@
         </div>
     </a>
 
-    <a href="/shopsphere/wishlist" class="feature-link">
+    <a href="${pageContext.request.contextPath}/wishlist" class="feature-link">
         <div class="feature wishlist">
 
             <div class="feature-icon">
@@ -454,7 +454,7 @@
         </div>
     </a>
 
-    <a href="/shopsphere/orders" class="feature-link">
+    <a href="${pageContext.request.contextPath}/orders" class="feature-link">
         <div class="feature orders">
 
             <div class="feature-icon">

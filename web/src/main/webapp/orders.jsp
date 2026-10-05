@@ -179,7 +179,7 @@
             <p>You haven't placed any orders yet.</p>
 
             <a class="shop"
-               href="/shopsphere/products">
+               href="${pageContext.request.contextPath}/products">
                 Start Shopping
             </a>
         </div>

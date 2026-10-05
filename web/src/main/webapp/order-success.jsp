@@ -97,7 +97,7 @@
 
         <br>
 
-        <a href="/shopsphere/products">
+        <a href="${pageContext.request.contextPath}/products">
             Continue Shopping →
         </a>
 
