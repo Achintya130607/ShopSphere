@@ -16,9 +16,8 @@ FROM tomcat:11.0.25-jdk17-temurin
 RUN rm -rf webapps/*
 
 COPY --from=build /app/web/target/shopsphere.war webapps/ROOT.war
-
-RUN printf '#!/bin/sh\nPORT=\\nsed -i "s/port=\"8080\"/port=\"\\"/" /usr/local/tomcat/conf/server.xml\nexec catalina.sh run\n' > /usr/local/tomcat/start.sh && chmod +x /usr/local/tomcat/start.sh
+COPY --from=build /app/web/target/shopsphere.war webapps/shopsphere.war
 
 EXPOSE 10000
 
-CMD ["/usr/local/tomcat/start.sh"]
+CMD sh -c 'PORT=; sed -i "s/port=\"8080\"/port=\"\\"/" /usr/local/tomcat/conf/server.xml; exec catalina.sh run'
