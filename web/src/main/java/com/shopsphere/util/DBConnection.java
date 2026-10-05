@@ -6,19 +6,23 @@ import java.sql.SQLException;
 
 public class DBConnection {
 
+    private static final String HOST = System.getenv("DB_HOST");
+    private static final String PORT = System.getenv().getOrDefault("DB_PORT", "4000");
+    private static final String DATABASE =
+            System.getenv().getOrDefault("DB_NAME", "shopsphere");
+    private static final String USER = System.getenv("DB_USER");
+    private static final String PASSWORD = System.getenv("DB_PASSWORD");
+
     private static final String URL =
-            "jdbc:mysql://localhost:3306/shopsphere";
-
-    private static final String USER = "root";
-
-    private static final String PASSWORD = "1234";
+            "jdbc:mysql://" + HOST + ":" + PORT + "/" + DATABASE
+            + "?sslMode=REQUIRED";
 
     public static Connection getConnection() throws SQLException {
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            throw new SQLException("MySQL JDBC Driver not found.", e);
         }
 
         return DriverManager.getConnection(URL, USER, PASSWORD);
