@@ -20,4 +20,4 @@ COPY --from=build /app/web/target/shopsphere.war webapps/shopsphere.war
 
 EXPOSE 10000
 
-CMD sh -c 'PORT=; sed -i "s/port=\"8080\"/port=\"\\"/" /usr/local/tomcat/conf/server.xml; exec catalina.sh run'
+CMD ["sh", "-c", "PORT=\; sed -i \"s/port=\\\"8080\\\"/port=\\\"\\\"/\" /usr/local/tomcat/conf/server.xml; exec catalina.sh run"]
