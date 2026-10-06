@@ -91,39 +91,51 @@
             box-shadow: 0 0 0 3px rgba(99,102,241,.12);
         }
 
-        /* Password field */
         .password-wrapper {
             position: relative;
             width: 100%;
         }
 
         .password-wrapper input {
-            padding-right: 50px;
+            padding-right: 52px;
         }
 
         .eye-button {
             position: absolute;
-            right: 12px;
+            right: 10px;
             top: 50%;
             transform: translateY(-50%);
-            width: auto;
+
+            width: 38px;
+            height: 38px;
+
             margin: 0;
-            padding: 4px;
+            padding: 0;
+
             border: none;
             background: transparent;
             box-shadow: none;
+
             color: #64748b;
             font-size: 20px;
+
             cursor: pointer;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            z-index: 10;
         }
 
         .eye-button:hover {
-            background: transparent;
+            background: #f1f5f9;
+            border-radius: 8px;
             color: #4f46e5;
             box-shadow: none;
         }
 
-        button[type="submit"] {
+        .login-button {
             width: 100%;
             margin-top: 20px;
             padding: 14px;
@@ -134,10 +146,6 @@
             cursor: pointer;
             background: linear-gradient(135deg,#2563eb,#4f46e5);
             box-shadow: 0 12px 25px rgba(37,99,235,.22);
-        }
-
-        button[type="submit"]:hover {
-            transform: translateY(-1px);
         }
 
         .bottom {
@@ -178,32 +186,46 @@
 
             <label>Email</label>
 
-            <input type="email"
-                   name="email"
-                   placeholder="Enter your email"
-                   required>
+            <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+            >
 
             <label>Password</label>
 
             <div class="password-wrapper">
 
-                <input type="password"
-                       id="password"
-                       name="password"
-                       placeholder="Enter your password"
-                       required>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    required
+                >
 
-                <button type="button"
-                        class="eye-button"
-                        id="togglePassword"
-                        onclick="togglePassword()"
-                        aria-label="Show password">
-                    👁️
-                </button>
+                <button
+                    type="button"
+                    class="eye-button"
+                    id="eyeButton"
+                    onclick="
+                        var p = document.getElementById('password');
+                        var e = document.getElementById('eyeButton');
+
+                        if (p.type === 'password') {
+                            p.type = 'text';
+                            e.innerHTML = '🙈';
+                        } else {
+                            p.type = 'password';
+                            e.innerHTML = '👁️';
+                        }
+                    "
+                >👁️</button>
 
             </div>
 
-            <button type="submit">
+            <button type="submit" class="login-button">
                 Login →
             </button>
 
@@ -219,28 +241,6 @@
     </div>
 
 </div>
-
-<script>
-    function togglePassword() {
-
-        const password = document.getElementById("password");
-        const toggleButton = document.getElementById("togglePassword");
-
-        if (password.type === "password") {
-
-            password.type = "text";
-            toggleButton.textContent = "🙈";
-            toggleButton.setAttribute("aria-label", "Hide password");
-
-        } else {
-
-            password.type = "password";
-            toggleButton.textContent = "👁️";
-            toggleButton.setAttribute("aria-label", "Show password");
-
-        }
-    }
-</script>
 
 </body>
 </html>
