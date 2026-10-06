@@ -6,7 +6,9 @@
     <title>ShopSphere - Login</title>
 
     <style>
-        * { box-sizing: border-box; }
+        * {
+            box-sizing: border-box;
+        }
 
         body {
             margin: 0;
@@ -89,7 +91,39 @@
             box-shadow: 0 0 0 3px rgba(99,102,241,.12);
         }
 
-        button {
+        /* Password field */
+        .password-wrapper {
+            position: relative;
+            width: 100%;
+        }
+
+        .password-wrapper input {
+            padding-right: 50px;
+        }
+
+        .eye-button {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: auto;
+            margin: 0;
+            padding: 4px;
+            border: none;
+            background: transparent;
+            box-shadow: none;
+            color: #64748b;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .eye-button:hover {
+            background: transparent;
+            color: #4f46e5;
+            box-shadow: none;
+        }
+
+        button[type="submit"] {
             width: 100%;
             margin-top: 20px;
             padding: 14px;
@@ -100,6 +134,10 @@
             cursor: pointer;
             background: linear-gradient(135deg,#2563eb,#4f46e5);
             box-shadow: 0 12px 25px rgba(37,99,235,.22);
+        }
+
+        button[type="submit"]:hover {
+            transform: translateY(-1px);
         }
 
         .bottom {
@@ -139,16 +177,31 @@
         <form action="${pageContext.request.contextPath}/login" method="post">
 
             <label>Email</label>
+
             <input type="email"
                    name="email"
                    placeholder="Enter your email"
                    required>
 
             <label>Password</label>
-            <input type="password"
-                   name="password"
-                   placeholder="Enter your password"
-                   required>
+
+            <div class="password-wrapper">
+
+                <input type="password"
+                       id="password"
+                       name="password"
+                       placeholder="Enter your password"
+                       required>
+
+                <button type="button"
+                        class="eye-button"
+                        id="togglePassword"
+                        onclick="togglePassword()"
+                        aria-label="Show password">
+                    👁️
+                </button>
+
+            </div>
 
             <button type="submit">
                 Login →
@@ -158,12 +211,36 @@
 
         <div class="bottom">
             Don't have an account?
-            <a href="${pageContext.request.contextPath}/register">Create Account</a>
+            <a href="${pageContext.request.contextPath}/register">
+                Create Account
+            </a>
         </div>
 
     </div>
 
 </div>
+
+<script>
+    function togglePassword() {
+
+        const password = document.getElementById("password");
+        const toggleButton = document.getElementById("togglePassword");
+
+        if (password.type === "password") {
+
+            password.type = "text";
+            toggleButton.textContent = "🙈";
+            toggleButton.setAttribute("aria-label", "Hide password");
+
+        } else {
+
+            password.type = "password";
+            toggleButton.textContent = "👁️";
+            toggleButton.setAttribute("aria-label", "Show password");
+
+        }
+    }
+</script>
 
 </body>
 </html>
