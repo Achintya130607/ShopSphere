@@ -41,5 +41,16 @@
             Register
         </a>
 
+        <a href="/logout"
+           style="margin-left:auto;
+                  background:#ef4444;
+                  color:white;
+                  text-decoration:none;
+                  padding:9px 16px;
+                  border-radius:8px;
+                  font-weight:bold;">
+            Logout
+        </a>
+
     </div>
 </nav>

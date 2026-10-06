@@ -1,6 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
-<%@ taglib prefix="shop" tagdir="/WEB-INF/tags" %>
 
 <!DOCTYPE html>
 <html>
@@ -18,6 +17,7 @@
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
             color: #172033;
+            min-height: 100vh;
 
             background:
                 radial-gradient(
@@ -36,8 +36,6 @@
                     #eef3ff,
                     #f9fbff
                 );
-
-            min-height: 100vh;
         }
 
         .products-page {
@@ -49,7 +47,7 @@
             margin-bottom: 42px;
         }
 
-        .page-heading .small-title {
+        .small-title {
             display: inline-block;
             color: #4f46e5;
             font-size: 13px;
@@ -88,7 +86,7 @@
             position: relative;
             overflow: hidden;
 
-            background: rgba(255, 255, 255, 0.90);
+            background: rgba(255, 255, 255, 0.92);
 
             border: 1px solid rgba(255, 255, 255, 0.95);
 
@@ -98,8 +96,6 @@
 
             box-shadow:
                 0 15px 40px rgba(30, 41, 59, 0.08);
-
-            backdrop-filter: blur(10px);
 
             transition:
                 transform 0.25s ease,
@@ -112,8 +108,6 @@
             box-shadow:
                 0 22px 50px rgba(30, 41, 59, 0.14);
         }
-
-        /* PRODUCT IMAGE AREA */
 
         .product-top {
             height: 220px;
@@ -131,11 +125,6 @@
             overflow: hidden;
 
             background:
-                radial-gradient(
-                    circle at 30% 30%,
-                    rgba(255, 255, 255, 0.95),
-                    transparent 35%
-                ),
                 linear-gradient(
                     135deg,
                     #dbeafe,
@@ -161,53 +150,6 @@
             transform: scale(1.05);
         }
 
-        .product-card:nth-child(2) .product-top {
-            background:
-                linear-gradient(
-                    135deg,
-                    #e0e7ff,
-                    #dbeafe
-                );
-        }
-
-        .product-card:nth-child(3) .product-top {
-            background:
-                linear-gradient(
-                    135deg,
-                    #dcfce7,
-                    #d1fae5
-                );
-        }
-
-        .product-card:nth-child(4) .product-top {
-            background:
-                linear-gradient(
-                    135deg,
-                    #fef3c7,
-                    #fde68a
-                );
-        }
-
-        .product-card:nth-child(5) .product-top {
-            background:
-                linear-gradient(
-                    135deg,
-                    #fce7f3,
-                    #fbcfe8
-                );
-        }
-
-        .product-card:nth-child(6) .product-top {
-            background:
-                linear-gradient(
-                    135deg,
-                    #e0f2fe,
-                    #bae6fd
-                );
-        }
-
-        /* BADGES */
-
         .discount-badge {
             position: absolute;
 
@@ -226,9 +168,6 @@
 
             font-weight: bold;
 
-            box-shadow:
-                0 8px 18px rgba(37, 99, 235, 0.25);
-
             z-index: 2;
         }
 
@@ -242,7 +181,7 @@
 
             border-radius: 999px;
 
-            background: rgba(255,255,255,0.88);
+            background: rgba(255,255,255,0.90);
 
             color: #475569;
 
@@ -252,8 +191,6 @@
 
             z-index: 2;
         }
-
-        /* PRODUCT TEXT */
 
         .product-name {
             margin: 0 0 8px;
@@ -310,8 +247,6 @@
 
             font-weight: bold;
         }
-
-        /* BUTTONS */
 
         .product-actions {
             display: flex;
@@ -395,12 +330,6 @@
             font-weight: bold;
         }
 
-        .footer-space {
-            margin-top: 10px;
-        }
-
-        /* RESPONSIVE */
-
         @media (max-width: 1100px) {
 
             .products {
@@ -470,14 +399,11 @@
 
         </div>
 
-
         <div class="products">
 
             <c:forEach var="product" items="${products}">
 
                 <div class="product-card">
-
-                    <!-- DISCOUNT -->
 
                     <c:if test="${product.discount > 0}">
 
@@ -487,21 +413,13 @@
 
                     </c:if>
 
-
-                    <!-- STOCK -->
-
                     <div class="stock-badge">
                         Stock: ${product.stock}
                     </div>
 
-
-                    <!-- REAL PRODUCT IMAGE -->
-
                     <div class="product-top">
 
                         <c:choose>
-
-                            <!-- SMARTPHONE -->
 
                             <c:when test="${product.name.toLowerCase().contains('phone')}">
 
@@ -512,9 +430,6 @@
 
                             </c:when>
 
-
-                            <!-- LAPTOP -->
-
                             <c:when test="${product.name.toLowerCase().contains('laptop')}">
 
                                 <img
@@ -523,9 +438,6 @@
                                 >
 
                             </c:when>
-
-
-                            <!-- T-SHIRT -->
 
                             <c:when test="${product.name.toLowerCase().contains('shirt')}">
 
@@ -536,9 +448,6 @@
 
                             </c:when>
 
-
-                            <!-- MIXER -->
-
                             <c:when test="${product.name.toLowerCase().contains('mixer')}">
 
                                 <img
@@ -547,9 +456,6 @@
                                 >
 
                             </c:when>
-
-
-                            <!-- BOOK -->
 
                             <c:when test="${product.name.toLowerCase().contains('book')}">
 
@@ -560,9 +466,6 @@
 
                             </c:when>
 
-
-                            <!-- FOOTBALL -->
-
                             <c:when test="${product.name.toLowerCase().contains('football')}">
 
                                 <img
@@ -571,9 +474,6 @@
                                 >
 
                             </c:when>
-
-
-                            <!-- FALLBACK -->
 
                             <c:otherwise>
 
@@ -588,35 +488,18 @@
 
                     </div>
 
-
-                    <!-- PRODUCT NAME -->
-
                     <h2 class="product-name">
                         ${product.name}
                     </h2>
 
-
-                    <!-- BRAND -->
-
                     <div class="brand">
-
-                        <strong>
-                            Brand:
-                        </strong>
-
+                        <strong>Brand:</strong>
                         ${product.brand}
-
                     </div>
-
-
-                    <!-- DESCRIPTION -->
 
                     <div class="description">
                         ${product.description}
                     </div>
-
-
-                    <!-- PRICE -->
 
                     <div class="price-row">
 
@@ -634,17 +517,11 @@
 
                     </div>
 
-
-                    <!-- ACTIONS -->
-
                     <c:choose>
 
                         <c:when test="${product.stock > 0}">
 
                             <div class="product-actions">
-
-
-                                <!-- VIEW DETAILS -->
 
                                 <a
                                     class="view-button"
@@ -652,9 +529,6 @@
                                 >
                                     View Details
                                 </a>
-
-
-                                <!-- ADD TO CART -->
 
                                 <form
                                     action="${pageContext.request.contextPath}/cart"
@@ -693,7 +567,6 @@
 
                         </c:when>
 
-
                         <c:otherwise>
 
                             <div class="out-stock">
@@ -712,12 +585,7 @@
 
     </div>
 
-
-    <div class="footer-space">
-
-        <jsp:include page="fragments/footer.jspf" />
-
-    </div>
+    <jsp:include page="fragments/footer.jspf" />
 
 </body>
 
