@@ -13,7 +13,7 @@
         </button>
 
         <!-- ShopSphere Logo -->
-        <a href="${pageContext.request.contextPath}/"
+        <a href=" /"
            class="ss-logo">
             Shop<span>Sphere</span>
         </a>
@@ -21,7 +21,7 @@
     </div>
 
     <!-- Logout -->
-    <a href="${pageContext.request.contextPath}/logout"
+    <a href=" /logout"
        class="ss-logout">
         Logout
     </a>
@@ -64,37 +64,37 @@
     <!-- Main Links -->
     <div class="ss-menu-section">
 
-        <a href="${pageContext.request.contextPath}/"
+        <a href=" /"
            class="ss-menu-link ss-active">
             <span class="ss-menu-icon">⌂</span>
             <span>Home</span>
         </a>
 
-        <a href="${pageContext.request.contextPath}/products"
+        <a href=" /products"
            class="ss-menu-link">
             <span class="ss-menu-icon">🛍️</span>
             <span>Products</span>
         </a>
 
-        <a href="${pageContext.request.contextPath}/cart"
+        <a href=" /cart"
            class="ss-menu-link">
             <span class="ss-menu-icon">🛒</span>
             <span>Cart</span>
         </a>
 
-        <a href="${pageContext.request.contextPath}/wishlist"
+        <a href=" /wishlist"
            class="ss-menu-link">
             <span class="ss-menu-icon">♥</span>
             <span>Wishlist</span>
         </a>
 
-        <a href="${pageContext.request.contextPath}/orders"
+        <a href=" /orders"
            class="ss-menu-link">
             <span class="ss-menu-icon">📦</span>
             <span>Orders</span>
         </a>
 
-        <a href="${pageContext.request.contextPath}/profile"
+        <a href=" /profile"
            class="ss-menu-link">
             <span class="ss-menu-icon">👤</span>
             <span>Profile</span>
@@ -108,13 +108,13 @@
 
     <div class="ss-menu-section">
 
-        <a href="${pageContext.request.contextPath}/login"
+        <a href=" /login"
            class="ss-menu-link">
             <span class="ss-menu-icon">↪</span>
             <span>Login</span>
         </a>
 
-        <a href="${pageContext.request.contextPath}/register"
+        <a href=" /register"
            class="ss-menu-link">
             <span class="ss-menu-icon">👤+</span>
             <span>Register</span>
